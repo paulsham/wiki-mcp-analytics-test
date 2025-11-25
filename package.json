@@ -1,0 +1,36 @@
+{
+  "name": "wiki-mcp-analytics",
+  "version": "1.0.0",
+  "description": "Analytics Specification MCP Server - Transform Wiki markdown to queryable formats",
+  "type": "module",
+  "main": "src/mcp-server/index.js",
+  "scripts": {
+    "build": "node src/builder/index.js",
+    "build:csv": "node src/builder/index.js --csv-only",
+    "build:js": "node src/builder/index.js --js-only",
+    "build:example": "node src/builder/index.js --use-examples",
+    "ci:build": "npm run build && git add specs/",
+    "ci:commit": "git commit -m 'chore(specs): auto-generate specs [skip ci]'",
+    "prepare": "husky",
+    "start": "node src/mcp-server/index.js"
+  },
+  "keywords": [
+    "analytics",
+    "mcp",
+    "model-context-protocol",
+    "wiki",
+    "transformation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "csv-parse": "^5.5.0"
+  },
+  "devDependencies": {
+    "husky": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
