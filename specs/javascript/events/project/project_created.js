@@ -13,7 +13,7 @@
  * User created a new project
  *
  * Table: Project Events
- * Property groups: user_context, session_context
+ * Property groups: user_context, session_context, project
  *
  * @type {Event}
  */
@@ -23,12 +23,11 @@ export const project_created = {
   table: 'Project Events',
   property_groups: [
     'user_context',
-    'session_context'
+    'session_context',
+    'project'
   ],
   additional_properties: [
-    'project_id',
-    'project_name',
-    'project_template'
+    
   ],
   notes: 'Fire after project is successfully created. Track template usage for product decisions.'
 };

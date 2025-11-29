@@ -13,7 +13,7 @@
  * User deleted an existing project
  *
  * Table: Project Events
- * Property groups: user_context, session_context
+ * Property groups: user_context, session_context, project
  *
  * @type {Event}
  */
@@ -23,12 +23,11 @@ export const project_deleted = {
   table: 'Project Events',
   property_groups: [
     'user_context',
-    'session_context'
+    'session_context',
+    'project'
   ],
   additional_properties: [
-    'project_id',
-    'project_name',
-    'project_template'
+    
   ],
   notes: 'Fire after project deletion is complete.'
 };

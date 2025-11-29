@@ -13,3 +13,6 @@ session_count"
 page_context,Information about the current page,"page_url
 page_title
 referrer"
+project,Information about a project,"project_id
+project_name
+project_template"

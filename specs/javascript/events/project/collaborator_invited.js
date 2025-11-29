@@ -13,7 +13,7 @@
  * User invited a collaborator to a project
  *
  * Table: Project Events
- * Property groups: user_context, session_context
+ * Property groups: user_context, session_context, project
  *
  * @type {Event}
  */
@@ -23,10 +23,10 @@ export const collaborator_invited = {
   table: 'Project Events',
   property_groups: [
     'user_context',
-    'session_context'
+    'session_context',
+    'project'
   ],
   additional_properties: [
-    'project_id',
     'invitee_email',
     'permission_level'
   ],

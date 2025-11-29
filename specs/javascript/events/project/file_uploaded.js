@@ -13,7 +13,7 @@
  * User uploaded a file to a project
  *
  * Table: Project Events
- * Property groups: user_context, session_context
+ * Property groups: user_context, session_context, project
  *
  * @type {Event}
  */
@@ -23,10 +23,10 @@ export const file_uploaded = {
   table: 'Project Events',
   property_groups: [
     'user_context',
-    'session_context'
+    'session_context',
+    'project'
   ],
   additional_properties: [
-    'project_id',
     'file_type',
     'file_size_bytes'
   ],
